@@ -35,11 +35,19 @@ class MSSQL:
         self.conn.commit()
         self.conn.close()
 
-ms = MSSQL(host="127.0.0.1",user="sa",pwd="rich123456",db="RichCRS_Others")
-reslist = ms.ExecQuery("select top 1 * from Institution")
+ms = MSSQL(host="127.0.0.1",user="sa",pwd="rich123456",db="HRInsurance")
+reslist = ms.ExecQuery("SELECT identity_no From emp where len(identity_no)=18")
 for i in reslist:
     print(i)
-
+'''
 newsql="update webuser set name='%s' where id=1"%u'测试'
 print(newsql)
 ms.ExecNonQuery(newsql.encode('utf-8'))
+'''
+
+
+
+
+
+
+
